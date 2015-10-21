@@ -19,6 +19,7 @@
     var newNumList = [];
 
     numList.forEach(function(num) {
+      if(num % 5 == 0 && num % 3 != 0) return newNumList.push('buzz'); 
       if(num % 3 == 0 && num % 5 == 0) return newNumList.push('fizzbuzz');
       newNumList.push(num);
     });
