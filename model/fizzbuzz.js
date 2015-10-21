@@ -8,7 +8,7 @@
 
   FizzBuzzModel.prototype.listAllNumber = function() {
     var numList = [];
-    for(var i = 1; i <= this.lastNumber; i++) {
+    for (var i = 1; i <= this.lastNumber; i++) {
       numList.push(i);
     }
     return numList;
@@ -19,7 +19,9 @@
     var newNumList = [];
 
     numList.forEach(function(num) {
-      if(num % 3 == 0 && num % 5 == 0) return newNumList.push('fizzbuzz');
+      if (num % 3 == 0 && num % 5 == 0) return newNumList.push(
+        'fizzbuzz');
+      if (num % 3 == 0) return newNumList.push('fizz');
       newNumList.push(num);
     });
 
